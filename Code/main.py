@@ -24,6 +24,41 @@ info = {}
 
 
 #with open('output.json', 'w') as f:
+
+#https://www.codingem.com/python-__add__-method/
+
+
+class Customer():
+    def __init__(self, Identifier, GivenName, FamilyName, CompanyName, Identification, IdentificationType, CustomerType, CustomerSubType, Mobile, Email, ApplicationsInUse):
+        self.Identifier = Identifier
+        self.GivenName = GivenName
+        self.FamilyName = FamilyName
+        self.CompanyName = CompanyName
+        self.Identification = Identification
+        self.IdentificationType = IdentificationType
+        self.CustomerType = CustomerType
+        self.CustomerSubType = CustomerSubType
+        self.Mobile = Mobile
+        self.Email = Email
+        self.ApplicationsInUse = ApplicationsInUse
+
+    def add_address(self, address):
+        self.Address = address
+        
+class Address():
+    def __init__(self, StreetName, BuildingNumber, StairwellIdentification, Apartment, Postcode, Pobox, CityName, CountryCode):
+        self.StreetName = StreetName
+        self.BuildingNumber = BuildingNumber
+        self.StairwellIdentification = StairwellIdentification
+        self.Apartment = Apartment
+        self.Postcode = Postcode
+        self.Pobox = Pobox
+        self.CityName = CityName
+        self.CountryCode = CountryCode
+
+list_of_info = []
+
+
 for i in range(ws.nrows):
     if i == 0:
         pass
@@ -33,23 +68,31 @@ for i in range(ws.nrows):
             if 0 <= j <= 9 or j == 18:
                 info.update({ws.cell_value(0,j):ws.cell_value(i,j)}) 
             else:
+
                 adress_info.update({ws.cell_value(0,j):ws.cell_value(i,j)})
 
             if j == ws.ncols-1:
+                address = dict(adress_info)
+                customer = dict(info)
+list_of_info.append(address)
+list_of_info.append(customer) 
+            #           #print(ws.cell_value(i,j),end="\t")
 
-                end_result = [ adress_info, info ]
-                #adress_info.update(info)
+# address = dict(adress_info)
+# customer = dict(info) 
 
-                with open("C://Users/Jimmy Chen/source/repos/Ohjelmointi-tehtava/output.json", "a" ) as f:
-                    x = json.dumps(end_result, indent=4)
+# for key, value in adress_info.items():
+#     setattr(address, key, value)
+# for key, value in info.items():
+#     setattr(customer, key, value)
+# customer.add_address(address)
+
+
+with open("C://Users/Jimmy Chen/source/repos/Ohjelmointi-tehtava/output.json", "a" ) as f:
+                    x = json.dumps(list_of_info, indent=4)
                     f.write(x + ' \n')
 
-                print(x, "\n")
-
-
-        #print(ws.cell_value(i,j),end="\t")
-
-    
+                    print(x, "\n")    
 
 # for index in range(len(json_str)):
 #     for key in json_str[index]:
@@ -117,34 +160,12 @@ for i in range(ws.nrows):
 
 
 
-# class Customer:
-#     def __init__(self, Identifier, GivenName, FamilyName, CompanyName, Identification, IdentificationType, CustomerType, CustomerSubType, Mobile, Email, ApplicationsInUse):
-#         self.Identifier = Identifier
-#         self.GivenName = GivenName
-#         self.FamilyName = FamilyName
-#         self.CompanyName = CompanyName
-#         self.Identification = Identification
-#         self.IdentificationType = IdentificationType
-#         self.CustomerType = CustomerType
-#         self.CustomerSubType = CustomerSubType
-#         self.Mobile = Mobile
-#         self.Email = Email
-#         self.ApplicationsInUse = ApplicationsInUse
 
 
 
 
 
-# class Address:
-#     def __init__(self, StreetName, BuildingNumber, StairwellIdentification, Apartment, Postcode, Pobox, CityName, CountryCode):
-#         self.StreetName = StreetName
-#         self.BuildingNumber = BuildingNumber
-#         self.StairwellIdentification = StairwellIdentification
-#         self.Apartment = Apartment
-#         self.Postcode = Postcode
-#         self.Pobox = Pobox
-#         self.CityName = CityName
-#         self.CountryCode = CountryCode
+
 
         
 # 
