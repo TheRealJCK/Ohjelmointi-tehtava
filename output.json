@@ -1,0 +1,78 @@
+[
+    {
+        "Address": {
+            "StreetName": "Pihlajakatu",
+            "BuildingNumber": "10",
+            "StairwellIdentification": "B",
+            "Apartment": "5",
+            "Postcode": "40500",
+            "Pobox": "",
+            "CityName": "Suolahti",
+            "CountryCode": "FI"
+        },
+        "Identifier": "100001",
+        "GivenName": "Teppo",
+        "FamilyName": "Testaaja",
+        "CompanyName": "",
+        "Identification": "246810-123P",
+        "IdentificationType": "PersonalId",
+        "CustomerType": "Consumer",
+        "CustomerSubType": "Normal",
+        "Mobile": "+358501234567",
+        "Email": "teppo.testaaja@akamon.fi"
+    },
+    {
+        "Address": {
+            "StreetName": "Testitie",
+            "BuildingNumber": "5",
+            "StairwellIdentification": "",
+            "Apartment": "",
+            "Postcode": "40530",
+            "Pobox": "",
+            "CityName": "Muurame",
+            "CountryCode": "FI"
+        },
+        "Identifier": "100002",
+        "GivenName": "Keijo",
+        "FamilyName": "Käyttäjä",
+        "CompanyName": "",
+        "Identification": "123456-246D",
+        "IdentificationType": "PersonalId",
+        "CustomerType": "Consumer",
+        "CustomerSubType": "Normal",
+        "Mobile": "+358123451234",
+        "Email": "keijo.kayttaja@akamon.fi",
+        "ApplicationsInUse": [
+            "1234",
+            "2468",
+            "2468"
+        ]
+    },
+    {
+        "Address": {
+            "StreetName": "Kauppakatu",
+            "BuildingNumber": "41",
+            "StairwellIdentification": "A",
+            "Apartment": "9",
+            "Postcode": "40100",
+            "Pobox": "",
+            "CityName": "Jyväskylä",
+            "CountryCode": "FI"
+        },
+        "Identifier": "100003",
+        "GivenName": "",
+        "FamilyName": "",
+        "CompanyName": "Akamon Innovation Oy",
+        "Identification": "3134950-4",
+        "IdentificationType": "BusinessId",
+        "CustomerType": "Company",
+        "CustomerSubType": "Normal",
+        "Mobile": "",
+        "Email": "info@akamon.fi",
+        "ApplicationsInUse": [
+            "1234",
+            "2468",
+            "2468"
+        ]
+    }
+]
