@@ -24,7 +24,7 @@ if os.path.exists(location) == True:
         look_for_file = file_name + ".xlsx"
 
     nd = find_file(location, look_for_file)
-
+    
     try:
         wb = xlrd.open_workbook(nd)   
     except TypeError:
@@ -56,8 +56,8 @@ if os.path.exists(location) == True:
                             Applications_In_Use_list.append(Applications)
                     else:
                         Applications_In_Use_list.append(var)
-                        other_info[ws.cell_value(0,j)] = Applications_In_Use_list
-                        Applications_In_Use_list = []
+                    other_info[ws.cell_value(0,j)] = Applications_In_Use_list
+                    Applications_In_Use_list = []
                 elif 'Address' in ws.cell_value(0,j):
                     name = ws.cell_value(0,j).rsplit('.', 1)[-1]
                     adress_info[name] = var
