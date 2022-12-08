@@ -23,10 +23,10 @@ if os.path.exists(location) == True:
     else:
         look_for_file = file_name + ".xlsx"
 
-    nd = find_file(location, look_for_file)
+    file_path = find_file(location, look_for_file)
 
     try:
-        wb = xlrd.open_workbook(nd)   
+        wb = xlrd.open_workbook(file_path)   
     except TypeError:
         print("\n File not found! \n Please check the file name and the disc location ")
         exit()
