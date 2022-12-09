@@ -18,7 +18,7 @@
         "IdentificationType": "PersonalId",
         "CustomerType": "Consumer",
         "CustomerSubType": "Normal",
-        "Mobile": "+358501234567",
+        "Mobile": "358501234567",
         "Email": "teppo.testaaja@akamon.fi",
         "ApplicationsInUse": [
             "1234",
@@ -44,7 +44,7 @@
         "IdentificationType": "PersonalId",
         "CustomerType": "Consumer",
         "CustomerSubType": "Normal",
-        "Mobile": "+358123451234",
+        "Mobile": "358123451234",
         "Email": "keijo.kayttaja@akamon.fi",
         "ApplicationsInUse": [
             "2468"
