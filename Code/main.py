@@ -1,7 +1,6 @@
 import json
 import pandas as pd
 
-
 test_path = r"C:\Users\Jimmy Chen\Downloads\anime (version 1).xlsb.xlsx"
 file_name = input("Enter the full file path (e.g. C:/Users\Jimmy Chen\Downloads\asiakas-data.xlsx): ")
 
@@ -64,6 +63,5 @@ for i in range(len(result)):
 with open('output.json', 'w', encoding='utf-8') as f:
     data_str = json.dumps(list_of_data, indent=4, ensure_ascii=False)
     f.write(data_str)
-
 
 print("\nAll done!")
