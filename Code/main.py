@@ -1,23 +1,18 @@
-import os
-from os.path import join
 import json
-import xlrd 
 import pandas as pd
 
 
-
 test_path = r"C:\Users\Jimmy Chen\Downloads\anime (version 1).xlsb.xlsx"
-file_name = input("Enter the full file path (e.g. C:/Users\Jimmy Chen\Downloads\asiakas-data.xlsx):")
-#location = input("Enter the disc where the file is located (character only): ")
+file_name = input("Enter the full file path (e.g. C:/Users\Jimmy Chen\Downloads\asiakas-data.xlsx): ")
 
-
+# read the file path from the input
 try:
     df = pd.read_excel(file_name)
 except FileNotFoundError:
     print("\n File not found! \n Please check the file path ")
     exit()
 
-
+# replace the NaN values with empty strings
 df.fillna('', inplace=True)
 result = df.to_dict(orient='records')
 
@@ -71,26 +66,4 @@ with open('output.json', 'w', encoding='utf-8') as f:
     f.write(data_str)
 
 
-
-
 print("\nAll done!")
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
